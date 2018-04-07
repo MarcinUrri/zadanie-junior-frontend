@@ -1,0 +1,24 @@
+@import "variables";
+@import "mixins";
+
+.buttons-group{  // positioning all buttons
+  @include flex-horizontal;
+  -ms-flex-wrap: wrap;  // POSITIONING ALL BUTTONS
+      flex-wrap: wrap;
+  .main-btn{              // main buttons
+    @include main-btn;
+    &:last-child{        // equal button changes
+      width: 50%;
+      background: $main-pink;
+      &:hover{
+        background-color: darken($main-pink, 10%)
+      }
+    }
+  }
+  .calc-btn{  // operator buttons changes
+    background: linear-gradient(to bottom, $main-purple 0%, rgba(144,86,225,1) 100%);
+    &:hover{
+      background: darken($main-purple, 5%)
+    }
+  }
+}

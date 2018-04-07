@@ -1,0 +1,29 @@
+@import "variables";
+@import "mixins";
+
+.result{   // calculating result input
+  @include flex-vertical;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 10rem;
+  background-color: $dark-background;
+  .user-numbers{   // small numbers input (steps)
+    @include main-input;
+    height: 3rem;
+    padding: 1rem 2rem 0rem 0rem;
+    color:#d98192;
+    font-size: 1.5rem;
+  }
+  .calculation-result{  // final result input
+    @include main-input;
+    color: #ffffff;
+    font-size: 4rem;
+    font-family: 'Lato', sans-serif;
+    padding: 0 2rem 1rem 0;
+  }
+}

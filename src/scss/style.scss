@@ -1,0 +1,17 @@
+@import "variables";
+@import "mixins";
+body{
+  @include background-gradient; // main gradient background
+  @include flex-vertical;  // centering calculator body
+    max-height: 100vh;  // make gradient full height
+}
+.main-calculator{   // main calculator body
+  @include flex-vertical;
+  width: 20rem;
+}
+
+@media screen and (max-width:400px) { // stretch body on small screens
+  .main-calculator{
+    width: 100%;
+  }
+}

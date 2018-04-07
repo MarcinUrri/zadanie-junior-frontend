@@ -1,0 +1,52 @@
+@mixin background-gradient {  // main background gradient
+  height: 100vh;
+  background: rgba(146,87,224,1);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(146,87,224,1)), color-stop(100%, rgba(245,146,115,1)));
+  background: -webkit-gradient(linear, left top, right top, from(rgba(146,87,224,1)), to(rgba(245,146,115,1)));
+  background: linear-gradient(to right, rgba(146,87,224,1) 0%, rgba(245,146,115,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9257e0', endColorstr='#f59273', GradientType=1 );
+}
+@mixin flex-horizontal {  //  row flex, center
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@mixin flex-vertical {  // column flex, center
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@mixin main-btn {   // main button settings
+  font-size: 1.2rem;
+  cursor: pointer;
+  outline: none;
+  height: 5rem;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,1)), to(rgba(245,245,245,1)));
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
+  border: none;
+  width: 25%;
+  &:hover{
+    background:#e5e6e8;
+  }
+}
+@mixin main-input {  // main input settings
+  text-align: right;
+  outline: none;
+  border: none;
+  background-color: $dark-background;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
